@@ -10,12 +10,12 @@ PLAYERSIZE = 2
 size    = (1000, 800)
 
 # Images pour l'animation des jambes du joueur
-playerLegs = [pygame.image.load('leg4.png'),
-              pygame.image.load('leg3.png'),
-              pygame.image.load('leg2.png'),
-              pygame.image.load('leg1.png')]
+playerLegs = [pygame.image.load('sprite/player/legs/leg4.png'),
+              pygame.image.load('sprite/player/legs/leg3.png'),
+              pygame.image.load('sprite/player/legs/leg2.png'),
+              pygame.image.load('sprite/player/legs/leg1.png')]
 
-playerTorso = pygame.image.load('Player_torso.png')
+playerTorso = pygame.image.load('sprite/player/torso/Player_gun.png')
 
 # Fonction qui normalise un vecteur pour le rendre unitaire (de longueur 1)
 def normalize_vector(vector):
