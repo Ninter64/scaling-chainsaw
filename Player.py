@@ -15,7 +15,9 @@ playerLegs = [pygame.image.load('sprites/player/legs/leg4.png'),
               pygame.image.load('sprites/player/legs/leg2.png'),
               pygame.image.load('sprites/player/legs/leg1.png')]
 
-playerTorso = pygame.image.load('sprites/player/torso/Player_gun.png')
+playerTorso = [pygame.image.load('sprites/player/torso/Player_gun.png'),
+               pygame.image.load('sprites/player/torso/Player_shotgun.png'),
+               pygame.image.load('sprites/player/torso/Player_smg.png')]
 
 # Fonction qui normalise un vecteur pour le rendre unitaire (de longueur 1)
 def normalize_vector(vector):
@@ -134,7 +136,6 @@ class Player(pygame.sprite.Sprite):
                     self.direction = 8
                 if self.movementVector[0] > 0:
                     self.direction = 9
-            print("1 : ",self.movementVector, "2 : ",self.direction)
 
 
         self.movementVector = normalize_vector(self.movementVector)
@@ -201,8 +202,13 @@ class Player(pygame.sprite.Sprite):
         elif self.direction == 3:
             blitRotate(surface, self.image, self.pos, (self.image.get_width()//2, self.image.get_height()//2), 45)
 
-
         mouse_pos = pygame.mouse.get_pos()
         angle = math.atan2(mouse_pos[0] - self.pos[0], mouse_pos[1] - self.pos[1])
         angle = math.degrees(angle)
-        blitRotate(surface, playerTorso, self.pos, offset, angle-90)
+        
+        if isinstance(self.equippedWeapon, Weapon.Pistol):
+            blitRotate(surface, playerTorso[0], self.pos, offset, angle-90)
+        elif isinstance(self.equippedWeapon, Weapon.Shotgun):
+            blitRotate(surface, playerTorso[1], self.pos, offset, angle-90)
+        elif isinstance(self.equippedWeapon, Weapon.MachineGun):
+            blitRotate(surface, playerTorso[2], self.pos, offset, angle-90) 
