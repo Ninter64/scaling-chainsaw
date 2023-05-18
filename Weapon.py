@@ -38,7 +38,7 @@ class Pistol(Weapon):
             self.lastShot = currentTime
             user.projectiles.add(Projectile(user.pos,
                                             super().normalize_vector(direction),
-                                            5, 2000, (0, 0, 255)))
+                                            25, 9999, (0, 0, 255)))
             
 class Shotgun(Weapon):
     def __init__(self):
