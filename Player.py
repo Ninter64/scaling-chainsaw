@@ -212,4 +212,3 @@ class Player(pygame.sprite.Sprite):
             blitRotate(surface, playerTorso[1], self.pos, (16*PLAYERSIZE,6*PLAYERSIZE), angle-90)
         elif isinstance(self.equippedWeapon, Weapon.MachineGun):
             blitRotate(surface, playerTorso[2], self.pos, (8*PLAYERSIZE,7*PLAYERSIZE), angle-90) 
-
