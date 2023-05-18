@@ -29,6 +29,7 @@ class Pistol(Weapon):
     def __init__(self):
         super().__init__()
         self.weaponCooldown = 250
+        self.gunAmmo = 6
     
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
@@ -46,6 +47,7 @@ class Shotgun(Weapon):
         self.weaponCooldown = 750
         self.spreadArc = 90
         self.projectilesCount = 7
+        self.shotgunAmmo = 2
         
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
@@ -64,17 +66,21 @@ class Shotgun(Weapon):
 class MachineGun(Weapon):
     def __init__(self):
         super().__init__()
-        self.weaponCooldown = 100
+        self.weaponCooldown = 25
         self.spreadArc = 25
-        
+        self.smgAmmo = 20
+
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
-        if currentTime - self.lastShot > self.weaponCooldown:
-            direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
-                if mousePos != user.pos else (1, 1)
-            self.lastShot = currentTime
-            theta = math.radians(random.random()*self.spreadArc - self.spreadArc/2)
-            projDir = super().rotate_vector(direction, theta)   
-            user.projectiles.add(Projectile(user.pos,
-                                            super().normalize_vector(projDir),
-                                            6, 1000, (194, 54, 16)))
+        if self.smgAmmo > 0:
+            if currentTime - self.lastShot > self.weaponCooldown:
+                direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
+                    if mousePos != user.pos else (1, 1)
+                self.lastShot = currentTime
+                theta = math.radians(random.random()*self.spreadArc - self.spreadArc/2)
+                projDir = super().rotate_vector(direction, theta)
+                print(self.smgAmmo)
+                self.smgAmmo-=1   
+                user.projectiles.add(Projectile(user.pos,
+                                                super().normalize_vector(projDir),
+                                                6, 1000, (194, 54, 16)))
