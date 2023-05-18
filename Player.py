@@ -10,14 +10,14 @@ PLAYERSIZE = 2
 size    = (1000, 800)
 
 # Images pour l'animation des jambes du joueur
-playerLegs = [pygame.image.load('sprites/player/legs/leg4.png'),
-              pygame.image.load('sprites/player/legs/leg3.png'),
-              pygame.image.load('sprites/player/legs/leg2.png'),
-              pygame.image.load('sprites/player/legs/leg1.png')]
+playerLegs = [pygame.transform.scale(pygame.image.load('sprites/player/legs/leg4.png'), (27*PLAYERSIZE,27*PLAYERSIZE)),
+              pygame.transform.scale(pygame.image.load('sprites/player/legs/leg3.png'), (27*PLAYERSIZE,27*PLAYERSIZE)),
+              pygame.transform.scale(pygame.image.load('sprites/player/legs/leg2.png'), (27*PLAYERSIZE,27*PLAYERSIZE)),
+              pygame.transform.scale(pygame.image.load('sprites/player/legs/leg1.png'), (27*PLAYERSIZE,27*PLAYERSIZE)),]
 
-playerTorso = [pygame.image.load('sprites/player/torso/Player_gun.png'),
-               pygame.image.load('sprites/player/torso/Player_shotgun.png'),
-               pygame.image.load('sprites/player/torso/Player_smg.png')]
+playerTorso = [pygame.transform.scale(pygame.image.load('sprites/player/torso/Player_gun.png'), (45*PLAYERSIZE,16*PLAYERSIZE)),
+               pygame.transform.scale(pygame.image.load('sprites/player/torso/Player_shotgun.png'), (45*PLAYERSIZE,16*PLAYERSIZE)),
+               pygame.transform.scale(pygame.image.load('sprites/player/torso/Player_smg.png'), (45*PLAYERSIZE,16*PLAYERSIZE))]
 
 # Fonction qui normalise un vecteur pour le rendre unitaire (de longueur 1)
 def normalize_vector(vector):
@@ -207,8 +207,9 @@ class Player(pygame.sprite.Sprite):
         angle = math.degrees(angle)
         
         if isinstance(self.equippedWeapon, Weapon.Pistol):
-            blitRotate(surface, playerTorso[0], self.pos, offset, angle-90)
+            blitRotate(surface, playerTorso[0], self.pos, (10*PLAYERSIZE,8*PLAYERSIZE), angle-90)
         elif isinstance(self.equippedWeapon, Weapon.Shotgun):
-            blitRotate(surface, playerTorso[1], self.pos, offset, angle-90)
+            blitRotate(surface, playerTorso[1], self.pos, (16*PLAYERSIZE,6*PLAYERSIZE), angle-90)
         elif isinstance(self.equippedWeapon, Weapon.MachineGun):
-            blitRotate(surface, playerTorso[2], self.pos, offset, angle-90) 
+            blitRotate(surface, playerTorso[2], self.pos, (8*PLAYERSIZE,7*PLAYERSIZE), angle-90) 
+
