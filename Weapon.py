@@ -2,6 +2,13 @@ import pygame
 import math
 import random
 from Projectile import Projectile
+import time, sys
+
+pygame.mixer.init()
+
+gunshot = pygame.mixer.Sound("sons/player/gun/shot.wav")
+gunshot.play
+time.sleep(5)
 
 class Weapon():
     def __init__(self):
@@ -37,6 +44,8 @@ class Pistol(Weapon):
             direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
+            gunshot.play
+            time.sleep(5)
             user.projectiles.add(Projectile(user.pos,
                                             super().normalize_vector(direction),
                                             25, 9999, (0, 0, 255)))

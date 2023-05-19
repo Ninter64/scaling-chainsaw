@@ -170,6 +170,8 @@ class Player(pygame.sprite.Sprite):
             
     def shoot(self, mousePos):
         self.equippedWeapon.shoot(self, mousePos)
+        
+        
 
 
 

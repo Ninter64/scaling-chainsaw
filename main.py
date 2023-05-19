@@ -6,7 +6,11 @@ from Player import Player
 from Enemy import Enemy
 from Projectile import Projectile
 
+
 pygame.init()
+pygame.mixer.init()
+
+
 size    = (1000, 800)
 BGCOLOR = (255, 255, 200)
 screen = pygame.display.set_mode(size)
@@ -72,6 +76,7 @@ def process_keys(keys, hero):
 def process_mouse(mouse, hero):
     if mouse[0]:
         hero.sprite.shoot(pygame.mouse.get_pos())
+        
 
 def game_loop():
     done = False
