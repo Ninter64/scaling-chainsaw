@@ -8,7 +8,6 @@ pygame.mixer.init()
 
 gunshot = pygame.mixer.Sound("sons/player/gun/shot.wav")
 gunshot.play
-time.sleep(5)
 
 class Weapon():
     def __init__(self):
@@ -45,7 +44,6 @@ class Pistol(Weapon):
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
             gunshot.play
-            time.sleep(5)
             user.projectiles.add(Projectile(user.pos,
                                             super().normalize_vector(direction),
                                             25, 9999, (0, 0, 255)))
