@@ -90,7 +90,7 @@ def render_entities(hero, enemies):
     for proj in Enemy.projectiles:
         proj.render(screen)
     for enemy in enemies:
-        enemy.render(screen)
+        enemy.render(screen, hero.sprite.rect.center)
     
 def process_keys(keys, hero):
     if keys[pygame.K_z]:
@@ -156,7 +156,7 @@ def game_loop():
             render_menu()
  
         # Enemy spawning process
-        if lastEnemy < currentTime - 200 and len(enemies) < 50:
+        if lastEnemy < currentTime - 200 and len(enemies) < 20:
             spawnSide = random.random()
             if spawnSide < 0.25:
                 enemies.add(Enemy((0, random.randint(0, size[1]))))
