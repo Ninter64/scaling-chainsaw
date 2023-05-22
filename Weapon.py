@@ -4,11 +4,6 @@ import random
 from Projectile import Projectile
 import time, sys
 
-pygame.mixer.init()
-
-gunshot = pygame.mixer.Sound("sons/player/gun/shot.wav")
-gunshot.play
-
 class Weapon():
     def __init__(self):
         self.lastShot = 0
@@ -34,28 +29,38 @@ class Weapon():
 class Pistol(Weapon):
     def __init__(self):
         super().__init__()
-        self.weaponCooldown = 250
+        self.weaponCooldown = 1500
         self.gunAmmo = 6
+
+        self.shoot_sound = pygame.mixer.Sound("sons/player/gun/shot.wav")
+        self.shoot_sound.set_volume(0.5)
+
+
     
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
+        
         if currentTime - self.lastShot > self.weaponCooldown:
             direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
-            gunshot.play
+
             user.projectiles.add(Projectile(user.pos,
                                             super().normalize_vector(direction),
                                             25, 9999, (0, 0, 255)))
+            self.shoot_sound.play()
             
 class Shotgun(Weapon):
     def __init__(self):
         super().__init__()
         self.weaponCooldown = 750
-        self.spreadArc = 90
-        self.projectilesCount = 7
+        self.spreadArc = 35
+        self.projectilesCount = 12
         self.shotgunAmmo = 2
-        
+
+        self.shoot_sound = pygame.mixer.Sound("sons/player/shotgun/shot.wav")
+        self.shoot_sound.set_volume(0.5)
+
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
         if currentTime - self.lastShot > self.weaponCooldown:
@@ -68,26 +73,32 @@ class Shotgun(Weapon):
                 projDir = super().rotate_vector(direction, theta)
                 user.projectiles.add(Projectile(user.pos,
                                                 super().normalize_vector(projDir),
-                                                7, 500, (232, 144, 42)))
+                                                7, 2000, (232, 144, 42)))
+            self.shoot_sound.play()
                 
 class MachineGun(Weapon):
     def __init__(self):
         super().__init__()
-        self.weaponCooldown = 25
+        self.weaponCooldown = 100
         self.spreadArc = 25
         self.smgAmmo = 20
+    
+        self.shoot_sound = pygame.mixer.Sound("sons/player/smg/shot.wav")
+        self.shoot_sound.set_volume(0.5)
+
 
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
-        if self.smgAmmo > 0:
-            if currentTime - self.lastShot > self.weaponCooldown:
-                direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
-                    if mousePos != user.pos else (1, 1)
-                self.lastShot = currentTime
-                theta = math.radians(random.random()*self.spreadArc - self.spreadArc/2)
-                projDir = super().rotate_vector(direction, theta)
-                print(self.smgAmmo)
-                self.smgAmmo-=1   
-                user.projectiles.add(Projectile(user.pos,
-                                                super().normalize_vector(projDir),
-                                                6, 1000, (194, 54, 16)))
+        
+        if currentTime - self.lastShot > self.weaponCooldown:
+            direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
+                if mousePos != user.pos else (1, 1)
+            self.lastShot = currentTime
+            theta = math.radians(random.random()*self.spreadArc - self.spreadArc/2)
+            projDir = super().rotate_vector(direction, theta)
+            user.projectiles.add(Projectile(user.pos,
+                                            super().normalize_vector(projDir),
+                                            6, 1500, (194, 54, 16)))
+
+            self.shoot_sound.play()
+

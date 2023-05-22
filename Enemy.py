@@ -12,7 +12,7 @@ class Enemy(pygame.sprite.Sprite):
     projectiles = pygame.sprite.Group()
     def __init__(self, pos):
         super().__init__()
-        self.image = pygame.Surface([8, 8])
+        self.image = pygame.Surface([20, 20])
         self.image.fill(pygame.Color('black'))
         self.rect = self.image.get_rect(x=pos[0], y=pos[1])
         self.radius = self.rect.width / 2
@@ -51,6 +51,6 @@ class Enemy(pygame.sprite.Sprite):
             self.lastShot = currentTime
             self.projectiles.add(Projectile(self.pos,
                                             normalize_vector(direction),
-                                            3, 500, (255, 0, 0)))
+                                            3, 50, (255, 0, 0)))
     def render(self, surface):
         surface.blit(self.image, self.pos)

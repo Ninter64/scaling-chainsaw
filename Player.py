@@ -74,12 +74,14 @@ class Player(pygame.sprite.Sprite):
         # Vecteur de mouvement du joueur
         self.movementVector = [0, 0]
         # Vitesse de déplacement du joueur
-        self.movementSpeed = 3
+        self.movementSpeed = 4
         # Liste des armes disponibles pour le joueur
         self.availableWeapons = [Weapon.Pistol(), Weapon.Shotgun(), Weapon.MachineGun()]
         # Arme équipée par défaut pour le joueur
         self.equippedWeapon = self.availableWeapons[0]
-        
+        # Arme équipée, lisible universelement 1:Gun 2:Shotgun 3:SMG par défaut 0 pour éviter des erreurs
+        self.holster = 0
+
         # Initialiser les variables pour l'animation des jambes
         self.leg_order = [3, 2, 1, 0, 1, 2, 3, 3, 2, 1, 0, 1, 2, 3]
         self.current_leg_index = 0
@@ -177,8 +179,8 @@ class Player(pygame.sprite.Sprite):
 
 
     def render(self, surface):
-
-        offset = [5, 5]
+        
+        
 
         #Direction :   O
         #            1 2 3
@@ -210,7 +212,10 @@ class Player(pygame.sprite.Sprite):
         
         if isinstance(self.equippedWeapon, Weapon.Pistol):
             blitRotate(surface, playerTorso[0], self.pos, (10*PLAYERSIZE,8*PLAYERSIZE), angle-90)
+            self.holster=1
         elif isinstance(self.equippedWeapon, Weapon.Shotgun):
             blitRotate(surface, playerTorso[1], self.pos, (16*PLAYERSIZE,6*PLAYERSIZE), angle-90)
+            self.holster=2
         elif isinstance(self.equippedWeapon, Weapon.MachineGun):
             blitRotate(surface, playerTorso[2], self.pos, (8*PLAYERSIZE,7*PLAYERSIZE), angle-90) 
+            self.holster=3
