@@ -9,6 +9,27 @@ ennemyTorso = [pygame.transform.scale(pygame.image.load('sprites/ennemis/chevali
               pygame.transform.scale(pygame.image.load('sprites/ennemis/chevalier3.png'), (37*ENEMYSIZE,50*ENEMYSIZE)),
               pygame.transform.scale(pygame.image.load('sprites/ennemis/chevalier4.png'), (37*ENEMYSIZE,50*ENEMYSIZE)),]
 
+def blitRotate(surf, image, pos, originPos, angle):
+
+    # offset from pivot to center
+    image_rect = image.get_rect(topleft = (pos[0] - originPos[0], pos[1]-originPos[1]))
+    offset_center_to_pivot = pygame.math.Vector2(pos) - image_rect.center
+    
+    # roatated offset from pivot to center
+    rotated_offset = offset_center_to_pivot.rotate(-angle)
+
+    # roatetd image center
+    rotated_image_center = (pos[0] - rotated_offset.x, pos[1] - rotated_offset.y)
+
+    # get a rotated image
+    rotated_image = pygame.transform.rotate(image, angle)
+    rotated_image_rect = rotated_image.get_rect(center = rotated_image_center)
+
+    # rotate and blit the image
+    surf.blit(rotated_image, rotated_image_rect)
+  
+    # draw rectangle around the image
+    #pygame.draw.rect(surf, (255, 0, 0), (*rotated_image_rect.topleft, *rotated_image.get_size()),2)
 
 def normalize_vector(vector):
     if vector == [0, 0]:
@@ -84,4 +105,7 @@ class Enemy(pygame.sprite.Sprite):
                             self.image = ennemyTorso[anim_index]
                         else:
                             self.image = pygame.transform.flip(ennemyTorso[anim_index], False, True)   
-        surface.blit(self.image, self.pos)
+        angle = math.atan2(playerPos[0] - self.pos[0], playerPos[1] - self.pos[1])
+        angle = math.degrees(angle)
+        blitRotate(surface, self.image, self.pos, (10*ENEMYSIZE,8*ENEMYSIZE), angle-90)
+        #surface.blit(self.image, self.pos)
