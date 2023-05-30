@@ -3,7 +3,8 @@ import random
 from Player import Player
 from Enemy import Enemy
 from Projectile import Projectile
-
+from menus import Reloads
+#from collections import defaultdict
 
 pygame.init()
 pygame.mixer.init()
@@ -29,35 +30,39 @@ smgSounds=[pygame.mixer.Sound("sons/player/smg/uncock.wav"),
            pygame.mixer.Sound("sons/player/smg/cock.wav"),
            pygame.mixer.Sound("sons/player/smg/shot.wav"),
            pygame.mixer.Sound("sons/player/smg/empty.wav")]
-
+#Quel ENFER !
 
 
 
 size    = (1000, 800)
 BGCOLOR = (255, 255, 200)
 screen = pygame.display.set_mode(size)
+
+
 uiweapons = [pygame.image.load("sprites/ui/gameui/gunbig.png"),
              pygame.image.load("sprites/ui/gameui/shotgunbig.png"),
              pygame.image.load("sprites/ui/gameui/smgbig.png")]
+
+
 scoreFont = pygame.font.Font("polices/Lady Radical 2.ttf", 30)
 healthFont = pygame.font.Font("polices/OmnicSans.ttf", 50)
 healthRender = healthFont.render('z', True, pygame.Color('red'))
-pygame.display.set_caption("Top Down")
+pygame.display.set_caption("MedieVolver (alpha 0.6.19)")
 
 done = False
 hero = pygame.sprite.GroupSingle(Player(screen.get_size()))
 
+reloadMenu = Reloads()
 enemies = pygame.sprite.Group()
 lastEnemy = 0
 sczdqore = 0
 clock = pygame.time.Clock()
 
-def render_menu():
-    reloadrender = scoreFont.render("RECGARGEMRNT", True, pygame.Color('black'))
-    scoreRect = reloadrender.get_rect()
-    scoreRect.right = size[0] - 100
-    scoreRect.top = 20
-    screen.blit(reloadrender, scoreRect)
+def process_menu(events):
+    reloadMenu.reload_Gun(screen, events)
+    reloadMenu.render(screen)
+    
+    
 
 def move_entities(hero, enemies, timeDelta):
     score = 0
@@ -121,15 +126,13 @@ def game_loop():
     lastEnemy = pygame.time.get_ticks()
     gameState= 0
     score = 0
-    print(gameState)
 
     while hero.sprite.alive and not done:
         keys = pygame.key.get_pressed()
         mouse = pygame.mouse.get_pressed()
         currentTime = pygame.time.get_ticks()
-       
-        
         for event in pygame.event.get():
+            events = event
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r:            
                     if gameState != 1:
@@ -143,17 +146,18 @@ def game_loop():
                             gunSounds[1].play()
                         elif hero.sprite.holster == 2:
                             shotgunSounds[1].play()    
-                        gameState=0    
+                        gameState=0         
 
             if event.type == pygame.QUIT:
                 return True
         screen.fill(BGCOLOR)
+
         
         process_keys(keys, hero)
         if gameState==0:
             process_mouse(mouse, hero)
         elif gameState==1:
-            render_menu()
+            process_menu(events)
  
         # Enemy spawning process
         if lastEnemy < currentTime - 200 and len(enemies) < 20:
