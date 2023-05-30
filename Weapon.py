@@ -27,32 +27,33 @@ class Weapon():
         return resultVector
 
 class Pistol(Weapon):
+    gunAmmo = [1,1,1,1,1,1] 
     def __init__(self):
         super().__init__()
-        self.weaponCooldown = 1500
-        self.gunAmmo = [1,1,1,1,1,1]
+        self.weaponCooldown = 1500 
         self.chamberIndex = 0
         self.shoot_sound = pygame.mixer.Sound("sons/player/gun/shot.wav"); self.shoot_sound.set_volume(0.5)
         self.empty_sound = pygame.mixer.Sound("sons/player/gun/empty.wav"); self.shoot_sound.set_volume(0.5)
 
 
     
-    def shoot(self, user, mousePos):
+    def shoot(self, user, mousePos, Ammo=gunAmmo):
+        print(Ammo)
         currentTime = pygame.time.get_ticks()
 
-        if self.chamberIndex==5:
+        if self.chamberIndex==6:
             self.chamberIndex=0
 
         if currentTime - self.lastShot > self.weaponCooldown:
             direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
-            if self.gunAmmo[self.chamberIndex]==1:
+            if Ammo[self.chamberIndex]==1:
                 user.projectiles.add(Projectile(user.pos,
                                                 super().normalize_vector(direction),
                                                 25, 9999, (0, 0, 255)))
                 self.shoot_sound.play()
-                self.gunAmmo[self.chamberIndex]=0
+                Ammo[self.chamberIndex]=0
                 self.chamberIndex+=1
             else:
                 self.empty_sound.play()
