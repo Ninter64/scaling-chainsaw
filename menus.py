@@ -10,15 +10,22 @@ bulletImage = [pygame.transform.scale(pygame.image.load('sprites/ui/reloads/gun/
                pygame.transform.scale(pygame.image.load('sprites/ui/reloads/gun/boolet.png'), (16*GUNSIZE,16*GUNSIZE)),
                pygame.transform.scale(pygame.image.load('sprites/ui/reloads/gun/boolet_ui.png'), (23*GUNSIZE/2,46*GUNSIZE/2))]
 bulletDefaultPos = (450,650)
+pistol = Weapon.Pistol
 
 class Reloads:
     def __init__(self):
-        super().__init__()
         self.image = gunImages
         self.shellImage = bulletImage[2]
         self.pos = (650,500)
         self.booletPos = bulletDefaultPos
-        self.aviableWeapons = [Weapon.Pistol(), Weapon.Shotgun(), Weapon.MachineGun()]
+        self.availableWeapons = [Weapon.Pistol(), Weapon.Shotgun(), Weapon.MachineGun()]
+        self.chambershellImage = [bulletImage[pistol.gunAmmo[0]],
+                                  bulletImage[pistol.gunAmmo[1]],
+                                  bulletImage[pistol.gunAmmo[2]],
+                                  bulletImage[pistol.gunAmmo[3]],
+                                  bulletImage[pistol.gunAmmo[4]],
+                                  bulletImage[pistol.gunAmmo[5]]]
+        self.chambershellPos = [(),(),(),(),(),()]
         self.active = None
         self.ammoGun = 6
 
@@ -27,17 +34,17 @@ class Reloads:
        
         #Gun 
     def reload_Gun(self, screen, events):
+        print(self.chambershellImage)
         mouse_pos = pygame.mouse.get_pos()
         if events.type == pygame.MOUSEBUTTONDOWN:
-            print("cliqué")
             if (self.booletPos[0] - mouse_pos[0]) < 50 and (self.booletPos[1] - mouse_pos[1]) < 50:
                 if events.button == 1:
                             self.active = True
                             self.shellImage = bulletImage[1]
+                            #if pygame.Rect.colliderect(self.shellImage, )
                             
 
         if events.type == pygame.MOUSEBUTTONUP:
-            print("lâché")
             if events.button == 1:
                 self.shellImage = bulletImage[2]
                 self.active = None
@@ -47,17 +54,7 @@ class Reloads:
         if events.type == pygame.MOUSEMOTION:
             if self.active:
                  self.booletPos = (mouse_pos[0]-25,mouse_pos[1]-25)
-            print("")
-            
-        
-#class Slugs
-#class SMG
-
-    
-    
-    
-    
-    
+                
     def render(self, surface):    
         surface.blit(gunImages, self.pos)
         surface.blit(self.shellImage, self.booletPos)               
