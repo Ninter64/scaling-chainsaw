@@ -30,25 +30,33 @@ class Pistol(Weapon):
     def __init__(self):
         super().__init__()
         self.weaponCooldown = 1500
-        self.gunAmmo = 6
-
-        self.shoot_sound = pygame.mixer.Sound("sons/player/gun/shot.wav")
-        self.shoot_sound.set_volume(0.5)
+        self.gunAmmo = [1,1,1,1,1,1]
+        self.chamberIndex = 0
+        self.shoot_sound = pygame.mixer.Sound("sons/player/gun/shot.wav"); self.shoot_sound.set_volume(0.5)
+        self.empty_sound = pygame.mixer.Sound("sons/player/gun/empty.wav"); self.shoot_sound.set_volume(0.5)
 
 
     
     def shoot(self, user, mousePos):
         currentTime = pygame.time.get_ticks()
-        
+
+        if self.chamberIndex==5:
+            self.chamberIndex=0
+
         if currentTime - self.lastShot > self.weaponCooldown:
             direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
-
-            user.projectiles.add(Projectile(user.pos,
-                                            super().normalize_vector(direction),
-                                            25, 9999, (0, 0, 255)))
-            self.shoot_sound.play()
+            if self.gunAmmo[self.chamberIndex]==1:
+                user.projectiles.add(Projectile(user.pos,
+                                                super().normalize_vector(direction),
+                                                25, 9999, (0, 0, 255)))
+                self.shoot_sound.play()
+                self.gunAmmo[self.chamberIndex]=0
+                self.chamberIndex+=1
+            else:
+                self.empty_sound.play()
+                self.chamberIndex+=1  
             
 class Shotgun(Weapon):
     def __init__(self):
@@ -56,7 +64,7 @@ class Shotgun(Weapon):
         self.weaponCooldown = 750
         self.spreadArc = 35
         self.projectilesCount = 12
-        self.shotgunAmmo = 2
+        self.shotgunAmmo = [1,1]
 
         self.shoot_sound = pygame.mixer.Sound("sons/player/shotgun/shot.wav")
         self.shoot_sound.set_volume(0.5)
