@@ -97,11 +97,12 @@ class Shotgun(Weapon):
            
                 
 class MachineGun(Weapon):
+    smgAmmo = 20
     def __init__(self):
         super().__init__()
         self.weaponCooldown = 100
         self.spreadArc = 25
-        self.smgAmmo = 20
+        
     
         self.shoot_sound = pygame.mixer.Sound("sons/player/smg/shot.wav")
         self.shoot_sound.set_volume(0.5)

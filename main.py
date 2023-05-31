@@ -64,6 +64,9 @@ def process_menu(events,holster):
     if holster == 2:
         reloadMenu.reload_Shotgun(screen, events)
         reloadMenu.render_Shotgun(screen)
+    if holster == 3:
+        reloadMenu.reload_Smg(screen, events)
+        reloadMenu.render_Smg(screen)
     
     
 
