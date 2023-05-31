@@ -91,7 +91,6 @@ class Enemy(pygame.sprite.Sprite):
     def render(self, surface, playerPos):
         self.frame_count += 1 # Ajouter le temps écoulé au compteur de temps
         self.distance_to_player = math.sqrt((playerPos[0]-self.pos[0])**2 + (playerPos[1]-playerPos[1])**2)
-        print(self.distance_to_player)
         if self.distance_to_player < 100:
                 if self.frame_count % 15 == 0:
                         self.current_anim_index += 1

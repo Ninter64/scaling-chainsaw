@@ -34,8 +34,6 @@ class Pistol(Weapon):
         self.chamberIndex = 0
         self.shoot_sound = pygame.mixer.Sound("sons/player/gun/shot.wav"); self.shoot_sound.set_volume(0.5)
         self.empty_sound = pygame.mixer.Sound("sons/player/gun/empty.wav"); self.shoot_sound.set_volume(0.5)
-
-
     
     def shoot(self, user, mousePos, Ammo=gunAmmo):
         print(Ammo)
@@ -60,30 +58,43 @@ class Pistol(Weapon):
                 self.chamberIndex+=1  
             
 class Shotgun(Weapon):
+    shotgunAmmo = [1,1]
     def __init__(self):
         super().__init__()
         self.weaponCooldown = 750
         self.spreadArc = 35
         self.projectilesCount = 12
-        self.shotgunAmmo = [1,1]
-
+        self.chamberIndex = 0
         self.shoot_sound = pygame.mixer.Sound("sons/player/shotgun/shot.wav")
+        self.empty_sound = pygame.mixer.Sound("sons/player/shotgun/empty.wav"); self.shoot_sound.set_volume(0.5)
         self.shoot_sound.set_volume(0.5)
 
-    def shoot(self, user, mousePos):
+    def shoot(self, user, mousePos, Ammo=shotgunAmmo):
         currentTime = pygame.time.get_ticks()
+
+        if self.chamberIndex==2:
+            self.chamberIndex=0
+            
         if currentTime - self.lastShot > self.weaponCooldown:
             direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
                 if mousePos != user.pos else (1, 1)
             self.lastShot = currentTime
             arcDifference = self.spreadArc / (self.projectilesCount - 1)
-            for proj in range(self.projectilesCount):
-                theta = math.radians(arcDifference*proj - self.spreadArc/2)
-                projDir = super().rotate_vector(direction, theta)
-                user.projectiles.add(Projectile(user.pos,
-                                                super().normalize_vector(projDir),
-                                                7, 2000, (232, 144, 42)))
-            self.shoot_sound.play()
+            if Ammo[self.chamberIndex]==1:
+                for proj in range(self.projectilesCount):
+                    theta = math.radians(arcDifference*proj - self.spreadArc/2)
+                    projDir = super().rotate_vector(direction, theta)
+                    user.projectiles.add(Projectile(user.pos,
+                                                    super().normalize_vector(projDir),
+                                                    7, 1250, (232, 144, 42)))
+                self.shoot_sound.play()
+                Ammo[self.chamberIndex]=0
+                self.chamberIndex+=1
+            else:
+                self.empty_sound.play()
+                self.chamberIndex+=1
+
+           
                 
 class MachineGun(Weapon):
     def __init__(self):

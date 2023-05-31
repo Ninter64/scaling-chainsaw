@@ -4,7 +4,6 @@ from Player import Player
 from Enemy import Enemy
 from Projectile import Projectile
 from menus import Reloads
-#from collections import defaultdict
 
 pygame.init()
 pygame.mixer.init()
@@ -47,7 +46,7 @@ uiweapons = [pygame.image.load("sprites/ui/gameui/gunbig.png"),
 scoreFont = pygame.font.Font("polices/Lady Radical 2.ttf", 30)
 healthFont = pygame.font.Font("polices/OmnicSans.ttf", 50)
 healthRender = healthFont.render('z', True, pygame.Color('red'))
-pygame.display.set_caption("MedieVolver (alpha 0.6.19)")
+pygame.display.set_caption("MedieVolver (alpha 0.6.20)")
 
 done = False
 hero = pygame.sprite.GroupSingle(Player(screen.get_size()))
@@ -58,9 +57,13 @@ lastEnemy = 0
 sczdqore = 0
 clock = pygame.time.Clock()
 
-def process_menu(events):
-    reloadMenu.reload_Gun(screen, events)
-    reloadMenu.render(screen)
+def process_menu(events,holster):
+    if holster == 1:
+        reloadMenu.reload_Gun(screen, events)
+        reloadMenu.render_Gun(screen)
+    if holster == 2:
+        reloadMenu.reload_Shotgun(screen, events)
+        reloadMenu.render_Shotgun(screen)
     
     
 
@@ -157,7 +160,7 @@ def game_loop():
         if gameState==0:
             process_mouse(mouse, hero)
         elif gameState==1:
-            process_menu(events)
+            process_menu(events,hero.sprite.holster)
  
         # Enemy spawning process
         if lastEnemy < currentTime - 200 and len(enemies) < 20:
