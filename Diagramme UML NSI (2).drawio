@@ -1,0 +1,202 @@
+<mxfile host="app.diagrams.net" modified="2023-04-27T12:45:36.413Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="1zCmIVLfc6wRYFTyPF5_" version="21.2.3" type="device">
+  <diagram name="Page-1" id="J5yoQXSGE1Efcgn4kzaQ">
+    <mxGraphModel dx="3088" dy="1965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Création d&#39;un jeu vidéo&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-470" y="-520" width="570" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-Contraintes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="H3a2B9aaKix7JA2hWV9J-6" vertex="1">
+          <mxGeometry x="-11" y="23" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-Savoir coder en Python&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="H3a2B9aaKix7JA2hWV9J-6" vertex="1">
+          <mxGeometry x="-9" y="60" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-10" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-Créer une histoire&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="H3a2B9aaKix7JA2hWV9J-6" vertex="1">
+          <mxGeometry x="-11" y="42" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-11" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;-Gérer son temps&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="H3a2B9aaKix7JA2hWV9J-6" vertex="1">
+          <mxGeometry x="-9" y="81" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-16" value="Pitch" style="swimlane;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="140" width="485" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-20" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Début de l&#39;histoire: cela se passe en 2042.Nous incarnons&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Andrew Poor, un détective travaillant au Texas à Westville.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;A première vue, il n&#39;a pas l&#39;air sympathique mais il est dépressif.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Une faille spatio-temporelle apparaît et il se fait téléporter. Il atterrit à&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Lannver. Un mage à côté de lui lui raconte que c&#39;est lui qui l&#39;a&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;amené dans ce monde. Ensuite il nous jette une malédiction qui&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;consiste à nous faire tuer Malgok, le roi de Hvenes.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="H3a2B9aaKix7JA2hWV9J-16" vertex="1">
+          <mxGeometry x="5" y="30" width="450" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="H3a2B9aaKix7JA2hWV9J-21" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="-5" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Joueur&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1110" y="105" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-58" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Diagramme des cas d&#39;utilisation&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="-940" y="-220" width="1140" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-60" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Déplacer horizontal&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="360" y="40" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-61" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Déplacer vertical&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="640" y="40" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-38" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Quitter&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="50" y="120" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-40" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Déplacer&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="390" y="210" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-41" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Recharger&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="390" y="315" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-42" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Tirer&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="_kv9vL3zjR1TitW6Mm7y-58" vertex="1">
+          <mxGeometry x="390" y="420" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Récompenser&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="_kv9vL3zjR1TitW6Mm7y-58">
+          <mxGeometry x="390" y="540" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Punir&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="_kv9vL3zjR1TitW6Mm7y-58">
+          <mxGeometry x="880" y="620" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-35" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Jouer&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="_kv9vL3zjR1TitW6Mm7y-58">
+          <mxGeometry x="50" y="310" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Configurer le système&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="_kv9vL3zjR1TitW6Mm7y-58">
+          <mxGeometry x="50" y="490" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-44" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="D3dYorw328JU1LhzHYPx-2" target="D3dYorw328JU1LhzHYPx-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="650" y="590" as="sourcePoint" />
+            <mxPoint x="810" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-45" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="D3dYorw328JU1LhzHYPx-35" target="D3dYorw328JU1LhzHYPx-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="654.5" as="sourcePoint" />
+            <mxPoint x="540" y="654.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-47" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="_kv9vL3zjR1TitW6Mm7y-40" target="_kv9vL3zjR1TitW6Mm7y-61">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="680" y="154.5" as="sourcePoint" />
+            <mxPoint x="840" y="154.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-46" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="_kv9vL3zjR1TitW6Mm7y-40" target="_kv9vL3zjR1TitW6Mm7y-60">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="410" y="190" as="sourcePoint" />
+            <mxPoint x="570" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-51" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="D3dYorw328JU1LhzHYPx-35" target="_kv9vL3zjR1TitW6Mm7y-40">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="200" y="310" as="sourcePoint" />
+            <mxPoint x="360" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-52" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="D3dYorw328JU1LhzHYPx-35" target="_kv9vL3zjR1TitW6Mm7y-41">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="220" y="349.5" as="sourcePoint" />
+            <mxPoint x="380" y="349.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-53" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_kv9vL3zjR1TitW6Mm7y-58" source="D3dYorw328JU1LhzHYPx-35" target="_kv9vL3zjR1TitW6Mm7y-42">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="195.10407640085623" y="378.28427124746213" as="sourcePoint" />
+            <mxPoint x="390" y="455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nSdSXmZjGOFJe-a4890y-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Diagramme des exigences&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-710" y="1040" width="1190" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="nSdSXmZjGOFJe-a4890y-6" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;i style=&quot;&quot;&gt;&amp;lt;&amp;lt;Tirer et recharger&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b style=&quot;&quot;&gt;Armement&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- Arme n°1 : Shotgun (fusil à pompe)&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- Arme n°2 : Pistolet&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- Arme n°3 : SMG (mitraillette)&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;- Shotgun : rechargement simple, deux balles, puissant à courte distance et faible à longue distance&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;- Pistolet : rechargement compliqué, six balles, puissant à longue et courte distance, tir perçant (3 ennemis maximum)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- SMG : rechargement compliqué, 15 balles, très faible à longue distance, modéré à courte distance et puissant contre les groupes d&#39;ennemis&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="nSdSXmZjGOFJe-a4890y-4" vertex="1">
+          <mxGeometry x="10" y="40" width="380" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="nSdSXmZjGOFJe-a4890y-7" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;i style=&quot;&quot;&gt;&amp;lt;&amp;lt;Déplacer&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b style=&quot;&quot;&gt;Déplacement et vitesse&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;- Déplacement horizontal&lt;br&gt;- Déplacement vertical&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Vitesse constante, déplacement avec les touches Z pour monter, Q pour aller à gauche, S pour descendre et D pour aller à droite&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="nSdSXmZjGOFJe-a4890y-4" vertex="1">
+          <mxGeometry x="790" y="40" width="390" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="nSdSXmZjGOFJe-a4890y-10" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;i style=&quot;&quot;&gt;&amp;lt;&amp;lt;Monde&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Temporalité&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Temporalité : passé&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;L&#39;histoire se déroule en 2042 puis le joueur est téléporté dans le passé en 1164 dans un monde médiéval.&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="nSdSXmZjGOFJe-a4890y-4" vertex="1">
+          <mxGeometry x="10" y="350" width="383" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nSdSXmZjGOFJe-a4890y-11" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;i style=&quot;&quot;&gt;&amp;lt;&amp;lt;Monde&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Lieu&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Lieu : monde futuriste puis un monde médiéval&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Grand monde mais divisé en plusieurs niveaux ( pour la démo, un ou deux).&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="nSdSXmZjGOFJe-a4890y-4" vertex="1">
+          <mxGeometry x="790" y="350" width="390" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lcY-EbikW2_OcLuKMIhv-2" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;i style=&quot;&quot;&gt;&amp;lt;&amp;lt;Ennemis&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b style=&quot;&quot;&gt;Types d&#39;ennemis&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;-Ennemis basiques&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 14px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Court vers le joueur en permanence avec une vitesse moyenne. Le joueur perd un coeur à son contact&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="nSdSXmZjGOFJe-a4890y-4" vertex="1">
+          <mxGeometry x="10" y="610" width="380" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-53" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Héros&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="80" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_kv9vL3zjR1TitW6Mm7y-57" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ennemi&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="287.5" y="280" width="45" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-21" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.976;exitY=0.686;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-42" target="_kv9vL3zjR1TitW6Mm7y-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="250" as="sourcePoint" />
+            <mxPoint x="-70" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-23" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D3dYorw328JU1LhzHYPx-2" target="_kv9vL3zjR1TitW6Mm7y-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="270" as="sourcePoint" />
+            <mxPoint x="170" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-25" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-42" target="_kv9vL3zjR1TitW6Mm7y-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-100" y="210" as="sourcePoint" />
+            <mxPoint x="-50" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-26" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-2" target="_kv9vL3zjR1TitW6Mm7y-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-640" y="60" as="sourcePoint" />
+            <mxPoint x="-590" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-31" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-41" target="_kv9vL3zjR1TitW6Mm7y-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="150" as="sourcePoint" />
+            <mxPoint x="-70" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-32" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-40" target="_kv9vL3zjR1TitW6Mm7y-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="150" as="sourcePoint" />
+            <mxPoint x="-70" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-33" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-41" target="_kv9vL3zjR1TitW6Mm7y-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="150" as="sourcePoint" />
+            <mxPoint x="-70" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-34" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-40" target="_kv9vL3zjR1TitW6Mm7y-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="150" as="sourcePoint" />
+            <mxPoint x="-70" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-24" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D3dYorw328JU1LhzHYPx-2" target="_kv9vL3zjR1TitW6Mm7y-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="450" as="sourcePoint" />
+            <mxPoint x="260" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-40" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-2" target="D3dYorw328JU1LhzHYPx-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1030" y="140" as="sourcePoint" />
+            <mxPoint x="-980" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="D3dYorw328JU1LhzHYPx-41" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_kv9vL3zjR1TitW6Mm7y-2" target="D3dYorw328JU1LhzHYPx-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1040" y="250" as="sourcePoint" />
+            <mxPoint x="-990" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
