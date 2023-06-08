@@ -122,6 +122,8 @@ def process_keys(keys, hero):
 def process_mouse(mouse, hero):
     if mouse[0]:
         hero.sprite.shoot(pygame.mouse.get_pos())
+    if mouse[2] and hero.sprite.holster==2:
+        hero.sprite.shoot(pygame.mouse.get_pos(),True)
 
             
 

@@ -65,9 +65,10 @@ class Shotgun(Weapon):
         self.spreadArc = 35
         self.projectilesCount = 12
         self.chamberIndex = 0
-        self.shoot_sound = pygame.mixer.Sound("sons/player/shotgun/shot.wav")
-        self.empty_sound = pygame.mixer.Sound("sons/player/shotgun/empty.wav"); self.shoot_sound.set_volume(0.5)
-        self.shoot_sound.set_volume(0.5)
+        self.shoot_sound = pygame.mixer.Sound("sons/player/shotgun/shot.wav"); self.shoot_sound.set_volume(0.5)
+        self.doubleshoot_sound = pygame.mixer.Sound("sons/player/shotgun/doubleshot.wav"); self.doubleshoot_sound.set_volume(0.5)
+        self.empty_sound = pygame.mixer.Sound("sons/player/shotgun/empty.wav"); self.empty_sound.set_volume(0.5)
+        
 
     def shoot(self, user, mousePos, Ammo=shotgunAmmo):
         currentTime = pygame.time.get_ticks()
@@ -88,6 +89,31 @@ class Shotgun(Weapon):
                                                     super().normalize_vector(projDir),
                                                     7, 1250, (232, 144, 42)))
                 self.shoot_sound.play()
+                Ammo[self.chamberIndex]=0
+                self.chamberIndex+=1
+            else:
+                self.empty_sound.play()
+                self.chamberIndex+=1
+    
+    def doubleshoot(self, user, mousePos, Ammo=shotgunAmmo):
+        currentTime = pygame.time.get_ticks()
+
+        if self.chamberIndex==2:
+            self.chamberIndex=0
+            
+        if currentTime - self.lastShot > self.weaponCooldown:
+            direction = (mousePos[0] - user.pos[0], mousePos[1] - user.pos[1]) \
+                if mousePos != user.pos else (1, 1)
+            self.lastShot = currentTime
+            arcDifference = self.spreadArc / (self.projectilesCount - 1)
+            if Ammo[0] and Ammo[1]==1:
+                for proj in range(self.projectilesCount*2+5):
+                    theta = math.radians(arcDifference*proj - self.spreadArc/2)
+                    projDir = super().rotate_vector(direction, theta)
+                    user.projectiles.add(Projectile(user.pos,
+                                                    super().normalize_vector(projDir),
+                                                    7, 1250, (232, 144, 42)))
+                self.doubleshoot_sound.play()
                 Ammo[self.chamberIndex]=0
                 self.chamberIndex+=1
             else:

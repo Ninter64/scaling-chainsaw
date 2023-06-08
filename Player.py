@@ -170,8 +170,11 @@ class Player(pygame.sprite.Sprite):
         self.movementVector = [0, 0]
    
             
-    def shoot(self, mousePos):
-        self.equippedWeapon.shoot(self, mousePos)
+    def shoot(self, mousePos, double=False):
+        if double:
+            self.equippedWeapon.doubleshoot(self, mousePos)
+        else:
+            self.equippedWeapon.shoot(self, mousePos)
         
         
 
